@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Photo Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Simple Photo Gallery</h1>
+    <p>Built with HTML &amp; CSS — responsive and lightweight</p>
+  </header>
+
+  <main class="container">
+    <section class="gallery" aria-label="Photo gallery">
+      <!-- Thumbnail items: link targets must match the lightbox id below -->
+      <a href="#img1" class="thumb">
+        <img src="images/pic1.jpg" alt="Photo 1">
+      </a>
+      <a href="#img2" class="thumb">
+        <img src="images/pic2.jpg" alt="Photo 2">
+      </a>
+      <a href="#img3" class="thumb">
+        <img src="images/pic3.jpg" alt="Photo 3">
+      </a>
+      <a href="#img4" class="thumb">
+        <img src="images/pic4.jpg" alt="Photo 4">
+      </a>
+      <a href="#img5" class="thumb">
+        <img src="images/pic5.jpg" alt="Photo 5">
+      </a>
+      <a href="#img6" class="thumb">
+        <img src="images/pic6.jpg" alt="Photo 6">
+      </a>
+    </section>
+  </main>
+
+  <!-- CSS-only lightbox previews; id must match the thumbnail href -->
+  <div id="img1" class="lightbox" aria-hidden="true">
+    <a class="close" href="#_"></a>
+    <img src="images/pic1.jpg" alt="Photo 1 large">
+  </div>
+
+  <div id="img2" class="lightbox" aria-hidden="true">
+    <a class="close" href="#_"></a>
+    <img src="images/pic2.jpg" alt="Photo 2 large">
+  </div>
+
+  <div id="img3" class="lightbox" aria-hidden="true">
+    <a class="close" href="#_"></a>
+    <img src="images/pic3.jpg" alt="Photo 3 large">
+  </div>
+
+  <div id="img4" class="lightbox" aria-hidden="true">
+    <a class="close" href="#_"></a>
+    <img src="images/pic4.jpg" alt="Photo 4 large">
+  </div>
+
+  <div id="img5" class="lightbox" aria-hidden="true">
+    <a class="close" href="#_"></a>
+    <img src="images/pic5.jpg" alt="Photo 5 large">
+  </div>
+
+  <div id="img6" class="lightbox" aria-hidden="true">
+    <a class="close" href="#_"></a>
+    <img src="images/pic6.jpg" alt="Photo 6 large">
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2025 — Simple Photo Gallery • GIFT, Bhubaneswar</p>
+  </footer>
+</body>
+</html>
