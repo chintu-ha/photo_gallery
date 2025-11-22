@@ -1,0 +1,120 @@
+/* Reset-ish */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --text: #222;
+  --muted: #6b7280;
+  --accent: #2b6cb0;
+  --gap: 12px;
+}
+
+/* Page layout */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.4;
+  padding: 24px;
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.site-header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.site-header p { color: var(--muted); font-size: 0.95rem; }
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+/* Gallery grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--gap);
+}
+
+/* Thumbnails */
+.thumb {
+  display: block;
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(16,24,40,0.05);
+  transition: transform .18s ease, box-shadow .18s ease;
+  text-decoration: none;
+}
+
+.thumb img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  transition: transform .25s ease;
+}
+
+/* Hover effect */
+.thumb:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(16,24,40,0.08);
+}
+.thumb:hover img {
+  transform: scale(1.03);
+}
+
+/* Lightbox (CSS-only via :target) */
+.lightbox {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2,6,23,0.7);
+  padding: 28px;
+  z-index: 9999;
+}
+
+/* When targeted, show it */
+.lightbox:target {
+  display: flex;
+}
+
+/* Lightbox image styling */
+.lightbox img {
+  max-width: 95%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 18px 40px rgba(2,6,23,0.6);
+}
+
+/* Close area (clickable) — full-screen invisible link */
+.lightbox .close {
+  position: absolute;
+  inset: 0;
+  text-decoration: none;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 22px;
+  font-size: 0.9rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 540px) {
+  .thumb img { height: 140px; }
+  body { padding: 14px; }
+}
