@@ -7,3 +7,7 @@ The project focuses on learning the basics of web structure and styling.
 It demonstrates how to create responsive and organized photo displays.
 This website is simple, lightweight, and easy to customize.
 
+<br>
+#Technologies Used
+HTML5 for structure
+CSS3 for styling and layout
