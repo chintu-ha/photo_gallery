@@ -14,7 +14,7 @@ CSS3 for styling and layout<br>
 <br>
 
 
-#Functional Requirements
+#Functional Requirements<br>
 Image Display:-
 The system must display images in a grid or column layout.
 <br>
